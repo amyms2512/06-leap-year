@@ -4,5 +4,17 @@
 
 # Don't forget to reach out for help after your own due diligence
 
-def is_leap_year(year):
-    return ''
+def is_leap(year):
+    if year % 4 != 0:
+        result = False
+    elif year % 400 == 0:
+        result = True
+    elif year % 100 == 0:
+        result = False
+    else:
+        result = True
+    
+    return result
+    
+    
+print(is_leap(2056))
